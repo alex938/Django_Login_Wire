@@ -10,7 +10,6 @@ __pycache__/
 
 db.sqlite3
 media/
-static_root/  # static directory where collectstatic gathers files for production
 
 */migrations/__pycache__/
 
