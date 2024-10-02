@@ -13,6 +13,7 @@
             <a href="{% url 'core:about' %}" class="py-2 px-6 text-white bg-blue-500 rounded-lg font-medium hover:bg-blue-600 transition duration-300">About</a>
             {% if request.user.is_authenticated %}
             <a href="{#}" class="py-2 px-6 text-white bg-blue-500 rounded-lg font-medium hover:bg-blue-600 transition duration-300">AUTHENTICATED</a>
+            <a href="{% url 'account:logout' %}" class="py-2 px-6 text-white bg-red-500 rounded-lg font-medium hover:bg-red-600 transition duration-300">Logout</a>
             {% else %}
                 <a href="{% url 'account:signup' %}" class="py-2 px-6 text-white bg-blue-500 rounded-lg font-medium hover:bg-blue-600 transition duration-300">Sign Up</a>
                 <a href="{% url 'account:login' %}" class="py-2 px-6 text-white bg-blue-500 rounded-lg font-medium hover:bg-blue-600 transition duration-300">Login</a>

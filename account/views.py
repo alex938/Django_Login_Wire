@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import User
-from django.contrib.auth import authenticate, login as login_auth
+from django.contrib.auth import authenticate, logout, login as login_auth
 from django.contrib import messages
 
 def signup(request):
@@ -38,3 +38,7 @@ def login(request):
                 print('Invalid email or password')
                 return render(request, 'account/login.html', {'error': 'Invalid email or password'})
     return render(request, 'account/login.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('core:homepage') 
